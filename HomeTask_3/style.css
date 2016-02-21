@@ -45,6 +45,7 @@ nav
 {
     width: 100%;
     margin-bottom: 40px;
+    font-size: 0;
 
     background: #545454;
 }
@@ -57,13 +58,14 @@ nav
     font-size: 14.6px;
 
     display: block;
-
+    border-right: 1px solid grey;
     padding: 14px 25px;
 
     color: #fff;
 }
 .main_menu a:hover
 {
+    transform: translateY(2px);
     background: #343434;
 }
 /*БОКОВОЕ МЕНЮ*/
@@ -87,6 +89,8 @@ nav
 }
 .menu_items li a:hover
 {
+    /*transform: translateX(15px);*/
+    padding-left: 40px;
     background: #c8c8c8;
 }
 
@@ -145,8 +149,8 @@ footer
 .copyright
 {
     font-size: 13.3px;
-
+    /*line-height: 100%;*/
     float: right;
 
-    padding: 15px 36px;
+    padding: 22px 36px;
 }

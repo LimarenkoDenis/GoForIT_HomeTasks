@@ -1,0 +1,13 @@
+body{
+	background: red;
+}
+.clearfix{
+	content: '';
+	display: block;
+	clear: both;
+}
+.wrap{
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+}

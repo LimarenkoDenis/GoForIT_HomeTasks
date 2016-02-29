@@ -97,14 +97,16 @@ nav
 /*ОПИСАНИЕ*/
 .main_content
 {
-    float: right;
+    /*float: right;*/
 
     box-sizing: border-box;
-    width: 678px;
+    /*width: 678px;*/
+    overflow: hidden;
 }
 .photo
 {
-    padding: 40px 75px;
+    /*padding: 40px 75px;*/
+    text-align: center;
 
     border: 2px solid #c8c8c8;
 }

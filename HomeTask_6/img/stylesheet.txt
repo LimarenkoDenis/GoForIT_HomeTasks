@@ -1,0 +1,47 @@
+.sprite {
+    background-image: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+/*.sprite-1 {
+    width: 22px;
+    height: 21px;
+    background-position: -10px -10px;
+}*/
+
+.sprite-2 {
+    width: 14px;
+    height: 18px;
+    background-position: -52px -10px;
+}
+
+/*.sprite-3 {
+    width: 12px;
+    height: 9px;
+    background-position: -86px -10px;
+}*/
+
+/*.sprite-4 {
+    width: 14px;
+    height: 10px;
+    background-position: -118px -10px;
+}*/
+
+.sprite-5 {
+    width: 12px;
+    height: 11px;
+    background-position: -152px -10px;
+}
+
+.sprite-6 {
+    width: 21px;
+    height: 17px;
+    background-position: -184px -10px;
+}
+
+.sprite-7 {
+    width: 12px;
+    height: 14px;
+    background-position: -225px -10px;
+}

@@ -1,9 +1,9 @@
 body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40c6d3+0,3abfce+3,1c9fb9+13,1191b1+18,0f8cad+39,0c739f+100 */
+  /*исправил цвет полоски*/
   background: #40c6d3; /* Old browsers */
-  background:    -moz-linear-gradient(top,  #40c6d3 0%, #3abfce 3%, #1c9fb9 13%, #1191b1 18%, #0f8cad 39%, #0c739f 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #40c6d3 0%,#3abfce 3%,#1c9fb9 13%,#1191b1 18%,#0f8cad 39%,#0c739f 100%); /* Chrome10-25,Safari5.1-6 */
-  background:         linear-gradient(to bottom,  #40c6d3 0%,#3abfce 3%,#1c9fb9 13%,#1191b1 18%,#0f8cad 39%,#0c739f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background:    -moz-linear-gradient(top,  #128aa7 0%,#41c5d3 10%,#39bdcd 20%,#1b9db8 30%,#108faf 40%,#0f8bad 50%,#0c739f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #128aa7 0%,#41c5d3 10%,#39bdcd 20%,#1b9db8 30%,#108faf 40%,#0f8bad 50%,#0c739f 100%); /* Chrome10-25,Safari5.1-6 */
+  background:         linear-gradient(to bottom,  #128aa7 0%,#41c5d3 10%,#39bdcd 20%,#1b9db8 30%,#108faf 40%,#0f8bad 50%,#0c739f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   font-family: Tahoma, Arial, sans-serif;
 
@@ -128,21 +128,19 @@ header::before {
 
   background: #363636;
 }
+
 .dropdown:after {
   position: absolute;
-  top: 17px;
-  right: 5px;
-
+  top: 18px;
+  right: 14px;
   width: 0;
   height: 0;
-
-  border-width: 9px 5px 0 5px;
   border-style: solid;
-  border-color: #fff #363636 #363636 #363636;
-  background: #fff;
-
+  border-width: 6px 3px 0 3px;
+  border-color: #ffffff transparent transparent transparent;
   content: "";
 }
+
 .dropdown:hover .drop-menu {
   position: absolute;
   top: 40px;

@@ -72,21 +72,21 @@ body {
 
   content: "";
 }
-.menu li:nth-child(6) a,
-.menu li:nth-child(7) a {
+.menu .Minhas a,
+.menu .Cadastre a {
   position: relative;
 
   border-left: 1px solid #56a2dc;
 
   color: #fff;
 }
-.menu li:nth-child(7) a {
+.menu .Cadastre a {
   margin-right: 20px;
 
   border-right: 1px solid #56a2dc;
 }
-.menu li:nth-child(6) a:hover,
-.menu li:nth-child(7) a:hover {
+.menu .Minhas a:hover,
+.menu .Cadastre a:hover {
   background: #2f7cc5	;
 }
 span {

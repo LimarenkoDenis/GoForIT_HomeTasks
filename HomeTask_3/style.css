@@ -1,7 +1,7 @@
 body
 {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 13.3px;
+    font-size: 13px;
 
     background: #f9f9f9;
 }
@@ -29,15 +29,13 @@ a
 {
     width: 966px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 50px 0 50px;
 
     background: #fff;
 }
 /*Хедер*/
-h1
+header img
 {
-    font-size: 36px;
-
     margin-bottom: 40px;
 }
 /*основное вертиальное меню*/
@@ -55,7 +53,7 @@ nav
 }
 .main_menu a
 {
-    font-size: 14.6px;
+    font-size: 14px;
 
     display: block;
     border-right: 1px solid grey;
@@ -136,7 +134,7 @@ footer
 }
 .menu li a
 {
-    font-size: 13.3px;
+    font-size: 13px;
 
     display: block;
 
@@ -150,8 +148,7 @@ footer
 }
 .copyright
 {
-    font-size: 13.3px;
-    /*line-height: 100%;*/
+    font-size: 13px;
     float: right;
 
     padding: 22px 36px;

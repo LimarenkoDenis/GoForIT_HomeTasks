@@ -577,3 +577,23 @@ footer p {
   font-size: 10px;
   color: #704543;
 }
+
+
+html, body {
+  height: 100%;
+}
+footer{
+  overflow: hidden;
+}
+.wrap {
+  height: 100%;
+  display: table;
+  overflow: hidden;
+  table-layout: fixed;
+  width: 100%;
+
+}
+.w1{
+  display: table-row;
+  height: 100%;
+}

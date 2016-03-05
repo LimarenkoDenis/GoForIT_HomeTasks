@@ -1,15 +1,79 @@
 @font-face {
     font-family: 'league_gothicregular';
-    src: url('..fonts/leaguegothic-regular-webfont.eot');
-    src: url('..fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('..fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
-         url('..fonts/leaguegothic-regular-webfont.woff') format('woff'),
-         url('..fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
+         url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 html { box-sizing: border-box; }  *:before, *:after { box-sizing: inherit; }
+*{border: 1px solid #000;}
+ul{list-style: none;padding: 0;margin: 0;}a{cursor: pointer;}
 body{
 	font-family: 'league_gothicregular', sans-serif;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.center-wrap{
+	width: 960px;
+	margin: 0 auto;
+}
+
+            /*=====ХЕДЕР=======*/
+.head{
+	text-transform: uppercase;
+	padding-top: 70px;
+	background: url(../img/header_bg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+            /*===========ЛОГО=========*/
+.logo{
+	font-size: 48px;
+	width: 170px;
+	float: left;
+	color: #fff;
+}
+.logo--head{
+	color: #724f81
+}
+              /*==============МЕНЮ==============*/
+.nav{
+	float: right;
+	margin-bottom: 175px;
+	padding: 0;
+	font-size: 0;
+}
+.menu__item{
+	display: inline-block;
+}
+.menu__link{
+	display: block;
+	padding:10px 27px;
+	font-size: 24px;
+	color:#fff;
+}
+
+
+
+.head-bg{
+	background: rgba(0,0,0,.2);
+	margin-bottom: 165px;
+	position: relative;
+}
+.main-description{
+	
+	padding: 76px 106px 76px 0;
+	width: 600px;
+}
+.main-img{
+	position: absolute;
+	top:-50px;
+	right: 10px;
 }

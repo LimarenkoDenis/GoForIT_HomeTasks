@@ -501,7 +501,7 @@ form p {
 }
 .items img {
   padding: 4px 31px;
-
+  max-width: 138px;
   border: 1px solid #a7b1b4;
   border-radius: 7px;
   background: #fff;

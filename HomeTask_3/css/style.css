@@ -27,9 +27,10 @@ a {
 .page-center {
   width: 966px;
   margin: 0 auto;
+  height: 100%;
   padding: 50px 50px 0 50px;
 
-  background: red;
+  background: #fff;
 }
 /*Хедер*/
 header img {

@@ -100,6 +100,9 @@ body{
 	position: relative;
 	padding: 76px 435px 79px 0;
 }
+.main-img--320{
+	display: none;
+}
 .main-img{
 	position: absolute;
 	top: -17px;

@@ -20,7 +20,6 @@
 		padding:10px 23px;
 		font-size: 20px;
 	}
-	/*.menu__link:first-child{padding-left: 0;}*/
 	.menu__item_active:before {
 	    content: "";
 	    width: 140%;
@@ -122,11 +121,14 @@
 		padding:0 20px;
 		margin: 0 auto;
 	}
-	/*.head{
-		text-align: center;
-	}*/
+	.head{
+		padding-bottom: 100px;
+	}
 	.logo{
 		margin: 0 auto;
+	}
+	.nav{
+		margin-bottom: 10px;
 	}
 	
 	nav .menu{
@@ -136,21 +138,19 @@
 		border-radius: 7px;
 		border: 1px solid #121b22;
 	}
-	 nav .menu__item{
+	nav .menu__item{
 		display: block;
-		border: 1px solid #000;
 		margin: 0 auto;
 		width: 246px;
 		text-align: center;
 		border-top: 1px solid #533f5a;
 		border-bottom: 1px solid #36283e;
 	}
+	nav .menu__item:nth-child(1),nav .menu__item:nth-child(6){border: none;}
 	.menu__link:hover{
 		background: rgba(43, 34, 49, 1);
 	}
 	
-
-
 	.menu__item_active:before {
 	    content: "";
 	    width: 40%;
@@ -171,13 +171,17 @@
 		top:-10px;
 		right: 12px;
 	}
-	.main-img{display: none;}
-	.main-description__play{display: none;}
-	.main-description__page-title{
+	.main-img{
+		display: none;
+	}
+	.main-description__play {
+		display: none;
+	}
+	.main-description__page-title {
 		font-size: 40px;
 	}
-	.main-description__title{
-		font-size: 24px;
+	.main-description__title {
+		font-size: 18px;
 	}
 	.main-description__summary{
 		display: none;
@@ -190,8 +194,14 @@
 		float: none;
 		margin-bottom: 25px;
 	}
+	.comment__title {
+		padding-right: 0;
+	}
 	.company-items__description{
 		margin: 0 0 10px 0;
+		max-height: 53px;
+	    overflow: hidden; /* Обрезаем все, что не помещается в область */
+	    text-overflow: ellipsis;
 	}
 	.setting:after,
 	.think:after,
@@ -205,7 +215,12 @@
 		float: none;
 		margin-left: 24px;
 	}
-
+	.comment__description{
+		max-height: 163px;
+	    overflow: hidden; /* Обрезаем все, что не помещается в область */
+	    text-overflow: ellipsis;
+	}
+	.update-block{margin-right: 30px;}
 
 	.news, .copyright{
 		width: 100%;
@@ -262,11 +277,14 @@
 		display: none;
 	}
 
-
+	.comment{margin-left: 0;width: 100%;}
 	.update-block{
 		width: 100%;
+		margin-right: 0;
 	}
-
+	.news-block	{
+		display: none;
+	}
 	.menu--footer{
 		display: none;
 	}

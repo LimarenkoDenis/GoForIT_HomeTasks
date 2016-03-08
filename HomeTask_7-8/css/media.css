@@ -3,7 +3,7 @@
 		width: 768px;
 		padding:0 20px;
 		margin: 0 auto;
-		/*border: 1px solid #000;*/
+		border: 1px solid #000;
 	}
 	.head{
 		padding-bottom: 154px;
@@ -259,8 +259,12 @@
 
 @media(max-width: 480px){
 	.center-wrap{
-		width: 320px;
-		padding:0 20px;
+		/*box-sizing: content-box;*/
+		/*width: 320px;*/
+		/*padding:0 20px;*/
+		width: 280px;
+		padding: 0;
+
 		margin: 0 auto;
 	}
 	.head-bg{
@@ -276,11 +280,22 @@
 	.main-img--320{
 		display: none;
 	}
-
-	.comment{margin-left: 0;width: 100%;}
+	.company-items__description{
+		padding-right: 15px;
+	}
+	.comment{
+		margin-left: 0;
+		width: 255px;
+		padding: 25px 35px;
+		float: right;
+	}
 	.update-block{
 		width: 100%;
 		margin-right: 0;
+	}
+	.update__link, .update__sescription{
+		overflow: hidden;
+		text-overflow:ellipsis;
 	}
 	.news-block	{
 		display: none;

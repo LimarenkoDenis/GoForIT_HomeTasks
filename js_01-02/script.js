@@ -14,10 +14,10 @@ var userInput = prompt('Введите число','');
 var userPow = prompt('Введите степень','');
 
 if (userPow < 0) {
-  alert('Степень ' + userPow +
+  console.log('Степень ' + userPow +
     'не поддерживается, введите целую степень, большую 0');
 } else {
-  alert( pow(userInput, userPow) );
+  console.log( pow(userInput, userPow) );
 }
 
 

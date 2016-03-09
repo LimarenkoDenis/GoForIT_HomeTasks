@@ -28,14 +28,12 @@ a {
   width: 966px;
   margin: 0 auto;
   height: 100%;
-  padding: 50px 50px 0 50px;
+  padding:0 50px;
 
   background: #fff;
 }
 /*Хедер*/
-header img {
-  margin-bottom: 40px;
-}
+header{padding:50px 0 40px;}
 /*основное вертиальное меню*/
 nav {
   width: 100%;
@@ -63,6 +61,7 @@ nav {
   transform: translateY(2px);
 }
 /*БОКОВОЕ МЕНЮ*/
+.content{padding-bottom: 10px;}  /*//Если удалить контент тоб не прижималось к футеру впритык*/
 .menu_items {
   float: left;
   box-sizing: border-box;
@@ -87,18 +86,16 @@ nav {
 /*ОПИСАНИЕ*/
 .main_content {
   /*float: right;*/
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   /*width: 678px;*/
   overflow: hidden;
 }
 .photo {
   border: 2px solid #c8c8c8;
-  /*padding: 40px 75px;*/
-
+  padding: 45px 0;
   text-align: center;
 }
 .description {
-  margin-bottom: 55px;
   padding: 25px;
 }
 

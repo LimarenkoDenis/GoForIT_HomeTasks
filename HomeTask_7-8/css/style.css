@@ -46,7 +46,7 @@ body {
   padding: 0 10px;
 }
 
-/*=====Ð¥Ð•Ð”Ð•Ð =======*/
+/*=====ÃÂ¥Ãâ€¢Ãâ€Ãâ€¢ÃÂ =======*/
 .head {
   padding-top: 70px;
   padding-bottom: 167px;
@@ -58,7 +58,7 @@ body {
 
   text-transform: uppercase;
 }
-/*===========Ð›ÐžÐ“Ðž=========*/
+/*===========Ãâ€ºÃÅ¾Ãâ€œÃÅ¾=========*/
 .logo {
   float: left;
   width: 170px;
@@ -69,7 +69,7 @@ body {
 .logo--head {
   color: #724f81;
 }
-/*==============ÐœÐ•ÐÐ®==============*/
+/*==============ÃÅ“Ãâ€¢ÃÂÃÂ®==============*/
 .nav {
   float: right;
   margin-bottom: 162px;
@@ -111,26 +111,26 @@ body {
 
 .head-bg {
   background: rgba(0,0,0,.2);
+  padding: 76px 0 79px;
 }
 
 /*VVOT TUT VOPROS */
 .main-description {
   position: relative;
-
-  padding: 76px 435px 79px 0;
+  padding: 0 435px 0 0;
 }
 .main-img--320 {
   display: none;
 }
 .main-img {
   position: absolute;
-  top: -17px;
+  top: -100px;
   right: 70px;
 }
 .main-description__play {
   /*display: block;*/
   position: absolute;
-  top: 140px;
+  top: 50px;
   right: 130px;
 }
 .main-description__page-title {
@@ -152,12 +152,12 @@ body {
   color: #fff;
   text-transform: capitalize;
   /*padding: 0;
-	margin: 0;*/
+  margin: 0;*/
 }
 
 
 
-/*Ð¡Ð•ÐšÐ¦ÐœÐ¯ Ð¢Ð Ð˜ ÐšÐžÐ›ÐžÐÐšÐ˜ Ð¡ Ð˜ÐšÐžÐÐšÐÐœÐ˜ Ð¡ÐŸÐ ÐÐ™Ð¢*/
+/*ÃÂ¡Ãâ€¢ÃÅ¡ÃÂ¦ÃÅ“ÃÂ¯ ÃÂ¢ÃÂ ÃËœ ÃÅ¡ÃÅ¾Ãâ€ºÃÅ¾ÃÂÃÅ¡ÃËœ ÃÂ¡ ÃËœÃÅ¡ÃÅ¾ÃÂÃÅ¡ÃÂÃÅ“ÃËœ ÃÂ¡ÃÅ¸ÃÂ ÃÂÃâ„¢ÃÂ¢*/
 
 .about-company {
   padding: 70px 0 68px; /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
@@ -168,7 +168,6 @@ body {
 }
 .company-items {
   position: relative;
-
   float: left;
   width: 280px;
   margin-right: 54px;
@@ -438,7 +437,7 @@ body {
   text-transform: uppercase;
 }
 /*.menu--footer .menu__link:first-child{
-	padding-left: 0;
+  padding-left: 0;
 }*/
 .designer {
   float: right;
@@ -459,87 +458,6 @@ body {
 .designer a:hover {
   opacity: .5;
 }
-
-
-
-/*
-@media(max-width: 980px){
-	.center-wrap{
-		width: 768px;
-		padding:0 20px;
-		margin: 0 auto;
-	}
-	.head{
-		padding-bottom: 154px;
-	}
-	.logo{
-		margin-bottom: 25px;
-		float: none;
-	}
-	.nav{
-		float: none;
-		margin-bottom: 110px;
-	}
-	.menu__link{
-		padding:10px 23px;
-		font-size: 20px;
-	}
-	
-	.main-description{
-		position: relative;
-		padding: 76px 400px 79px 0;
-	}
-	.main-description__page-title{
-		font-size: 44px;
-	}
-	.main-description__title{
-		font-size: 24px;
-	}
-	.main-description__summary{
-		font-size: 16px;
-	}
-	.main-img{
-		position: absolute;
-		top: -25px;
-		right: 31px;
-	}
-	.main-description__play{
-		display: block;
-		position: absolute;
-		top: 127px;
-		right: 95px;
-	.company-items{
-		width: 224px;
-		padding-left: 55px;
-		margin-right: 28px;
-	}
-	.company-items__title{
-
-	}
-
-
-
-
-
-
-
-
-@media(max-width: 788px){
-	.center-wrap{
-		width: 500px;
-		padding:0 10px;
-		margin: 0 auto;
-	}
-}
-
-@media(max-width: 500px){
-	.center-wrap{
-		width: 340px;
-		padding:0 10px;
-		margin: 0 auto;
-	}
-}*/
-
 
 html,
 body {

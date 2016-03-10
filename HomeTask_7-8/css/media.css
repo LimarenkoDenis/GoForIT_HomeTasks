@@ -29,8 +29,10 @@
 	    bottom: 11px;
 	    left: -22px;
 	}
+
+	.head-bg{padding: 95px 0 105px;}
 	.main-description{
-		padding: 76px 400px 79px 0;
+		padding: 0 400px 0 0;
 	}
 	.main-description__page-title{
 		font-size: 44px;
@@ -161,14 +163,14 @@
 	    left: 72px;
 	}
 
-
+	.head-bg{padding: 90px 0 85px;}
 	.main-description{
-		padding: 90px 205px 85px 0;
+		padding: 0 205px 0 0;
 	}
 	.main-img--320{
 		display: block;
 		position: absolute;
-		top:-10px;
+		top:-100px;
 		right: 12px;
 	}
 	.main-img{
@@ -188,7 +190,7 @@
 	}
 
 
-
+	
 	.company-items{
 		width: 100%;
 		float: none;
@@ -211,7 +213,7 @@
 	}
 
 	.comment{
-		width: 100%;
+		width: 412px;
 		float: none;
 		margin-left: 24px;
 	}
@@ -259,17 +261,22 @@
 
 @media(max-width: 480px){
 	.center-wrap{
-		/*box-sizing: content-box;*/
-		/*width: 320px;*/
-		/*padding:0 20px;*/
-		width: 280px;
-		padding: 0;
-
+		width: 320px;
+		padding:0 20px;
+		border: 1px solid #000;
 		margin: 0 auto;
 	}
+	.menu .menu__item{display: none;}
+	.menu .menu__item_active{display: block;}
+	.menu .menu__item_active:hover .menu .menu__item{
+		display: block;
+		opacity: 0.1;
+	}
+	
 	.head-bg{
 		background: none;
 	}
+	.head-bg{padding: 85px 0 }
 	.main-description{
 		padding: 0;
 		text-align: center;

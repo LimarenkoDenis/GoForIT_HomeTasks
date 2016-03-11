@@ -1,5 +1,4 @@
 // ПЕРВАЯ ЧАСТЬ
-
 function pow(userInput, userPow) {
   var result = 1;
 
@@ -9,16 +8,27 @@ function pow(userInput, userPow) {
 
   return result;
 }
+function minusPow(userInput, userPow) {
+  var result = 1;
 
-var userInput = prompt('Введите число','');
-var userPow = prompt('Введите степень','');
+  for (var i = 0; i > userPow; i--) {
+    result *= userInput;
+  }
+  
+  result = 1 / result;
+  return result;
+}
 
-if ( userPow < 0 ) {
-  console.log('Степень ' + userPow +
-    'не поддерживается, введите целую степень, большую 0');
+var userInput = prompt('Введите число', '');
+var userPow = prompt('Введите степень', '');
+
+if (userPow < 0) {
+  console.log(minusPow(userInput, userPow));
 } else {
   console.log( pow(userInput, userPow) );
 }
+
+
 
 
 // ВТОРАЯ ЧАСТЬ

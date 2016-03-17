@@ -183,7 +183,7 @@ header::before {
 
   text-align: center;
 }
-.content h2 {
+.contacts__title {
   font-size: 18px;
   color: #424c43;
 }

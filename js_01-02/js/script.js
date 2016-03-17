@@ -8,6 +8,7 @@ function pow(userInput, userPow) {
 
   return result;
 }
+
 function minusPow(userInput, userPow) {
   var result = 1;
 
@@ -34,28 +35,26 @@ if (userPow < 0) {
 // ВТОРАЯ ЧАСТЬ
 
 var arrName = [];
+var userName = prompt('Теперь введите свое имя', '');
 
-for(var x = 0; x < 5; x++) {
-	var inputName = prompt('ВВедте имя','')
-	
-	arrName[x] = inputName;
-
-	console.log( arrName[x] );
-}
-
-var userName = prompt('Теперь введите свое имя','');
- 
 function find(array) {
 	for (var i = 0; i < array.length; i++) {
      if ( array[i] == userName ) return true;
   }
 
-  	return false;
+  return false;
+}
+
+for(var x = 0; x < 5; x++) {
+  var inputName = prompt('ВВедте имя', '')
+  
+  arrName[x] = inputName;
+
+  console.log( arrName[x] );
 }
 
 if( find(arrName) == true ){
   alert(userName+" Вы успешно вошли")
-}
-else{
+} else{
   alert('Ошибка')
 }	

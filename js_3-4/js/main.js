@@ -52,6 +52,7 @@ var page = {
 	buildTitle : function () {
 		var wrap = document.createElement('form');
 		wrap.classList.add('wrapper');
+		
 		var body = document.querySelector('body');
 		document.body.insertBefore(wrap, body.children[0]);
 
@@ -105,10 +106,12 @@ var page = {
 		btn.setAttribute('type', 'submit');
 		btn.classList.add('btn', 'btn-primary');
 		btn.value = data.result;
+	},
+	pageInit: function() {
+		this.buildTitle();
+		this.buildQuestion();
+		this.btn();
 	}
-
 }
 
-page.buildTitle();
-page.buildQuestion();
-page.btn();
+page.pageInit();

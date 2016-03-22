@@ -1,0 +1,48 @@
+.wrapper {
+	width: 700px;
+	height: 800px;
+	margin: auto;
+}
+.panel{
+	padding: 20px;
+}
+.panel p {
+	text-align: center;
+	padding-top: 20px;
+	font-size: 80px;
+	margin: 0px;
+}
+
+.startbtn,
+.clearbtn,
+.btn {
+	width: 32%;
+	background-color: #FFD700;
+	border: 2px solid black;
+	display: inline-block;
+	border-radius: 15px;
+}
+.clearbtn{
+	background: red;
+}
+.btn{
+	background: #808000
+}
+.startbtn p,
+.clearbtn p,
+.btn p {
+	width: 100%;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 20px;
+}
+
+.block{
+	background: #F08080;
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+	margin-top: 5px;
+	border-radius: 10px;
+}

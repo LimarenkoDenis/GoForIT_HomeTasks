@@ -129,7 +129,7 @@
 		display: block;
 		text-align: center;
 	}
-	.menu__item{
+	.dropdown .menu__item{
 		display: block;
 		border-top: 1px solid #533f5a;
 		border-bottom: 1px solid #36283e;

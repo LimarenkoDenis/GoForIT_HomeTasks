@@ -3,7 +3,7 @@ var data = {
 
 	categories:[
 	{
-		categoryName : "1. Вопрос #1",
+		categoryName : "Вопрос №1",
 
 		variant : [
 			'Вариант ответа №1',
@@ -14,7 +14,7 @@ var data = {
 		
 	},
 	{
-		categoryName : "2. Вопрос #2",
+		categoryName : "Вопрос №2",
 
 		variant : [
 			'Вариант ответа №1',
@@ -24,7 +24,7 @@ var data = {
 		inputName: ['21','22','23']
 	},
 	{
-		categoryName : "3. Вопрос #3",
+		categoryName : "Вопрос №3",
 
 		variant : [
 			'Вариант ответа №1',
@@ -70,7 +70,7 @@ var page = {
 			
 			var span = document.createElement('p');
 			block.appendChild(span)
-			span.innerHTML = data.categories[i].categoryName;
+			span.innerHTML = (i+1) + '. ' + data.categories[i].categoryName;
 
 			console.log( data.categories[i].categoryName );
 

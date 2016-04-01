@@ -1,0 +1,67 @@
+body{
+	background: #e4e4e1;
+}
+form{
+	background: #d3d3d3;
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px;
+	margin-bottom: 40px;
+}
+.hint{
+	display: none;
+	width: 250px;
+	padding: 3px 7px;
+	background: #d4dedf;
+	border-radius: 5px;
+/*для второго способа*/
+	/*transition: all .5s;
+	opacity: 0;
+	visibility: hidden;*/
+}
+label{
+	display: inline-block;
+	width: 100px;
+	padding: 10px;
+}
+.btnHelp{
+	margin-top: 40px;
+	display: inline-block;
+	border-radius: 20px;
+	padding: 10px;
+	background: #d4dedf;
+	border: 1px solid #000;
+}
+/*для второго способа*/
+.show{
+	display: inline-block;
+	opacity: 1;
+	visibility: visible;
+}
+
+/*табы*/
+.tabs{
+	width: 600px;
+	padding: 30px;
+	background: #d3d3d3;
+	margin: 0 auto;
+}
+.tabs_content  {
+	background:#fff;
+	padding: 15px;
+}
+.content { 
+	display:none
+}
+.link{
+	background: #d4dedf;
+	padding: 10px;
+	display: inline-block;
+	margin-bottom: 5px;
+	text-decoration: none;
+	color:#000;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.is-current { background:#fff;margin-bottom: 0;padding-bottom: 15px;}
+.is-active{display: block;}

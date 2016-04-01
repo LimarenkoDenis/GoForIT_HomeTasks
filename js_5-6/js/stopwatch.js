@@ -4,7 +4,7 @@
 	var clear = document.querySelector('.clear');
 	var wrapper = document.querySelector('.wrapper');
 
-	timer.innerHTML = '0:0:000';
+	timer.innerHTML = '00:00:000';
 	start.innerHTML = 'Start';
 	clear.innerHTML = 'Clear';
 
@@ -31,7 +31,7 @@
 	function stop() {
 
 		clearInterval(id);
-		timer.innerHTML = '0:0:000';
+		timer.innerHTML = '00:00:000';
 		start.innerHTML = 'Start';
 		start.addEventListener('click', startTimer);
 		milliseconds = 0;
@@ -40,15 +40,12 @@
 
 		date = new Date(0, 0);
 
-
 		var block = document.querySelectorAll('.block');
-
 		for (var i = 0; i < block.length; i++) {
 			wrapper.removeChild(block[i])
 		};
 	};
 
-	var date;
 	var milliseconds = 0;
 	var seconds = 0;
 	var minutes = 0;
@@ -71,13 +68,21 @@
 		if (milliseconds >= 100) {
 			millisecondsTime = milliseconds;
 		}
+		if (milliseconds < 100) {
+			millisecondsTime = "0" + Number(milliseconds);
+		}
+		if (milliseconds < 10) {
+			millisecondsTime = "0" + "0" + Number(milliseconds);
+		}
 		if (seconds >= 60) {
 			seconds = 0;
 			++minutes;
 		}
-
-		if (minutes >= 60) {
-			minutes = 0;
+		if (seconds < 10) {
+			seconds = "0" + Number(seconds);
+		}
+		if (minutes < 10) {
+			minutes = "0" + Number(minutes);
 		}
 
 		++milliseconds;
@@ -92,5 +97,8 @@
 		wrapper.appendChild(block);
 
 		block.innerHTML = minutes + ':' + seconds + ':' + millisecondsTime;
+		if (timer.innerHTML == '00:00:000') {
+			block.innerHTML = '00:00:000';
+		}
 	}
 })();

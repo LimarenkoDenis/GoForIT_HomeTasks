@@ -14,12 +14,16 @@ $(function(){
    $(".link").on('click', function () {
         $(".link").removeClass("is-current");
         $(this).addClass("is-current");        
-        $(".content").hide();
+        $(".content").hide()
         $($(this).attr("href")).show();
-        // var i = $(this).attr('href');
-        // $(i).show();
    });
 });
+
+
+      // $(".content").hide().removeClass('is-active');
+      // $($(this).attr("href")).show().addClass('is-active');
+      // var i = $(this).attr('href');
+      // $(i).show();
 
 
 

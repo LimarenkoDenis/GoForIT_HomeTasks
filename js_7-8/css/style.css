@@ -32,6 +32,10 @@ label{
 	background: #d4dedf;
 	border: 1px solid #000;
 }
+.btnHelp:hover{
+	opacity: .7;
+	cursor: pointer;
+}
 /*для второго способа*/
 .show{
 	display: inline-block;
@@ -62,6 +66,9 @@ label{
 	color:#000;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
+}
+.link:hover{
+	opacity: .8;
 }
 .is-current { background:#fff;margin-bottom: 0;padding-bottom: 15px;}
 .is-active{display: block;}

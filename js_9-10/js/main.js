@@ -1,4 +1,31 @@
 (function($) {
+
+// Function of changing the type and value of the checkbox 
+//el - span container for normal checkbox input   
+    function changeCheck(el) {
+        var el = el,
+            input = el.find("input").eq(0);
+        if (!input.attr("checked")) {
+            el.css("background-position", "0 -17px");
+            input.attr("checked", true)
+        } else {
+            el.css("background-position", "0 0");
+            input.attr("checked", false)
+        }
+        return true;
+    }
+
+//if the attribute is set to checked, change the view of the checkbox
+    function changeCheckStart(el) {
+        var el = el,
+            input = el.find("input").eq(0);
+        if (input.attr("checked")) {
+            el.css("background-position", "0 -17px");
+        }
+        return true;
+    }
+
+//RESPONSIVE CAROUSEL
     $(function() {
         var jcarousel = $('.jcarousel');
 
@@ -45,72 +72,34 @@
                     return '<a href="#' + page + '">' + page + '</a>';
                 }
             });
-    });
-})(jQuery);
+//END OF RESPONSIVE CAROUSEL
 
-
-$(function() {
-    $('select').styler({
-        selectSearch: true,
-        selectSearchLimit: 5
-    });
-    $('input').attr('class', 'styler');
-});
-
-
-
-//checkbox
-
-jQuery(document).ready(function() {
-    jQuery(".niceCheck").mousedown(
-        /* при клике на чекбоксе меняем его вид и значение */
-        function() {
-            changeCheck(jQuery(this));
+    //CUSTOM SELECT
+        $('select').styler({
+            selectSearch: true,
+            selectSearchLimit: 5
         });
-    jQuery(".niceCheck").each(
-        /* при загрузке страницы нужно проверить какое значение имеет чекбокс и в соответствии с ним выставить вид */
-        function() {
-            changeCheckStart(jQuery(this));
+        $('input').attr('class', 'styler');
+
+    //CASTOTM CHECKBOX
+        $(".niceCheck").mousedown(function() {
+            changeCheck($(this));
         });
-});
-
-/* 
-    функция смены вида и значения чекбокса
-    el - span контейнер дял обычного чекбокса
-    input - чекбокс
-*/
-function changeCheck(el) {
-    var el = el,
-        input = el.find("input").eq(0);
-    if (!input.attr("checked")) {
-        el.css("background-position", "0 -17px");
-        input.attr("checked", true)
-    } else {
-        el.css("background-position", "0 0");
-        input.attr("checked", false)
-    }
-    return true;
-}
-
-/*     если установлен атрибут checked, меняем вид чекбокса*/
-function changeCheckStart(el) {
-    var el = el,
-        input = el.find("input").eq(0);
-    if (input.attr("checked")) {
-        el.css("background-position", "0 -17px");
-    }
-    return true;
-}
+        $(".niceCheck").each(function() {
+            changeCheckStart($(this));
+        });
 
 
+    // DROPDOWN MENU
+        $('.dropdown').hover(
+            function() {
+                $(this).children('.sub-menu').stop( false, false ).slideDown(400);
+            },
+            function() {
+                $(this).children('.sub-menu').stop( false, false ).slideUp(400);
+            }
+        );
+    //END OF DROPDOWN MENU 
 
-$(document).ready(function() {
-    $( '.dropdown' ).hover(
-        function(){
-            $(this).children('.sub-menu').slideDown(200);
-        },
-        function(){
-            $(this).children('.sub-menu').slideUp(200);
-        }
-    );
-}); // end ready
+    });
+})($);

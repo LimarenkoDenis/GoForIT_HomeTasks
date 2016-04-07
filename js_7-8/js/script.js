@@ -14,7 +14,7 @@ $(function(){
    $(".link").on('click', function () {
         $(".link").removeClass("is-current");
         $(this).addClass("is-current");        
-        $(".content").hide()
+        $(".content").hide();
         $($(this).attr("href")).show();
    });
 });

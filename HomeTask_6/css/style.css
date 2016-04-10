@@ -40,13 +40,14 @@ header {
   padding: 17px 9px 11px;
 }
 
-/*Ð¢Ð•Ð›Ð•Ð¤ÐžÐ*/
-.phone {
-  float: left;
-  padding-top: 5px;
 
+.phone {
+  /*float: left;
+  padding-top: 5px;*/
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
   font-size: 18px;
-  letter-spacing: .2px;
 }
 .phone a:first-child {
   position: relative;
@@ -65,7 +66,6 @@ header {
   background-position: -139px -23px;
 
   content: "";
-  /* border: 1px solid #000;*/
 }
 .phone a:first-child:before {
   position: absolute;
@@ -74,16 +74,20 @@ header {
   width: 22px;
   height: 22px;
 
-  border-radius: 50%;
+  border-radius: 22px;
   background: #0e385c;
 
   content: "";
 }
+.phone a:hover{
+  opacity: 1;
+  color:rgba(7,43,77,1);
+  text-decoration: underline;
+}
 
-/*Ð¤ÐžÐ ÐœÐ  Ð¥Ð•Ð”Ð•Ð Ð*/
+
 .head form {
   position: relative;
-
   padding: 2px 0 3px 26px;
 
   border: 1px solid #596d80;
@@ -106,15 +110,14 @@ header {
   content: "";
 }
 .head_form {
-  display: block;
-  float: left;
+  /*display: block;
+  float: left;*/
+  display: inline-block;
+  vertical-align: middle;
   width: 471px;
-  margin-left: 15px;
-  /* padding: 1px 3px; */
-  /* padding-left: 30px; */
+  margin-right: 20px;
 
   border-radius: 4px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,1e5799+65,0d365a+100,1f6787+100 */
   background: rgb(125,185,232);/* Old browsers */
   background:    -moz-linear-gradient(top,  rgba(125,185,232,1) 0%, rgba(30,87,153,1) 65%, rgba(13,54,90,1) 100%, rgba(31,103,135,1) 100%);/* FF3.6-15 */
   background: -webkit-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(30,87,153,1) 65%,rgba(13,54,90,1) 100%,rgba(31,103,135,1) 100%);/* Chrome10-25,Safari5.1-6 */
@@ -158,14 +161,14 @@ header {
 }
 
 
-/*Ð˜ÐšÐžÐÐšÐ˜ ÐÐÐ’Ð˜Ð“ÐÐ¦Ð˜Ð˜ Ð¥Ð•Ð”Ð•Ð Ð Ð¡ÐŸÐ ÐÐ’Ð*/
-.siteNavigation {
-  float: right;
-  padding: 0 6px;
 
+.siteNavigation {
+  /*float: right;*/
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 6px;
   border: 1px solid #c1c8cb;
   border-radius: 11px;
-  /* margin-right: 0px; */
 }
 .siteNavigation a {
   display: inline-block;
@@ -173,19 +176,19 @@ header {
   background: url("../img/spritesheet.png");
   /* padding: 0px; */
 }
-.siteNavigation .mail {
+.siteNavigation .icn-mail {
   width: 12px;
   height: 9px;
 
   background-position: -86px -10px;
 }
-.siteNavigation .map {
+.siteNavigation .icn-map {
   width: 14px;
   height: 10px;
 
   background-position: -118px -10px;
 }
-.siteNavigation .home {
+.siteNavigation .icn-home {
   width: 12px;
   height: 11px;
 
@@ -194,13 +197,7 @@ header {
 
 
 
-
-
-/*ÃƒÆ’Ã‚ÂÃƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã‚ÂÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â®*/
 .menu {
-  /*  -webkit-box-shadow: 10px 9px 10px -4px rgba(80,82,94,1);
--moz-box-shadow: 10px 9px 10px -4px rgba(80,82,94,1);
-box-shadow: 10px 9px 10px -4px rgba(80,82,94,1);*/
   margin-bottom: 9px;
 
   border: 1px solid #0a1030;
@@ -209,7 +206,6 @@ box-shadow: 10px 9px 10px -4px rgba(80,82,94,1);*/
   background: -webkit-linear-gradient(top,  #4d5663 0%, #464d54 22%, #3a4046 25%, #2d3236 40%, #0f1011 60%, #010101 100%);
   background:         linear-gradient(top,  #4d5663 0%, #464d54 22%, #3a4046 25%, #2d3236 40%, #0f1011 60%, #010101 100%);
           box-shadow: 7px 9px 10px -3px rgba(80,82,94,1);
-  /* margin-bottom: 1px; */
 
   -webkit-box-shadow: 7px 9px 10px -3px rgba(80,82,94,1);
      -moz-box-shadow: 7px 9px 10px -3px rgba(80,82,94,1);
@@ -360,16 +356,16 @@ nav {
   left: 2px;
 
   width: 22px;
-  height: 22px;
+  height: 21px;
 
-  border-radius: 50%;
+  border-radius: 22px;
   background: #114165;
 
   content: "";
 }
 .menu_title:after {
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 7px;
 
   width: 12px;
@@ -431,10 +427,8 @@ nav {
   display: block;
 
   font-size: 12px;
-  /* padding: 1px 0 1px 30px; */
   font-weight: bold;
-  color: #465961;
-  /* border: 1px solid #000; */
+  color: #465961; 
 }
 .catalog a:hover {
   /* display: block; */
@@ -446,14 +440,12 @@ nav {
 .main  li ul li {
   margin-left: 30px;
   padding: 5px 0 5px 0;
-  /*border: 1px solid #000;*/
 
   list-style: circle;
 }
 
 
 .products {
-  /* border: 1px solid #000; */
   float: left;
   width: 503px;
   margin-left: 9px;
@@ -491,13 +483,6 @@ nav {
   font-style: italic;
   color: #114165;
 }
-/*.items img {
-  padding: 4px 31px;
-  max-width: 138px;
-  border: 1px solid #a7b1b4;
-  border-radius: 7px;
-  background: #fff;
-}*/
 .img-box{
   display: block;
   max-width: 138px;

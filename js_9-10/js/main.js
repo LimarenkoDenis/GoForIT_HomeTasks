@@ -102,4 +102,4 @@
     //END OF DROPDOWN MENU 
 
     });
-})($);
+})(jQuery);

@@ -49,6 +49,9 @@ header {
   margin-right: 15px;
   font-size: 18px;
 }
+.phone a{
+  color:#5e696d;
+}
 .phone a:first-child {
   position: relative;
 
@@ -81,7 +84,6 @@ header {
 }
 .phone a:hover{
   opacity: 1;
-  color:rgba(7,43,77,1);
   text-decoration: underline;
 }
 

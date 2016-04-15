@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/jQuery.myCarousel.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="content clearfix">
+        <div class="carousel-list">
+            <div class="carousel-element"><img src="img/1_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/3_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/4_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/5_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/1_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/2_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/2_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/3_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/4_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/5_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/1_b.jpg" alt=""></div>
+            <div class="carousel-element"><img src="img/2_b.jpg" alt=""></div>
+        </div>
+
+        <script type="text/html"  id='test'>
+            <% for (var i = 0; i < data.length; i++ ) { %>
+                <div class="news">
+                    <h2 class="title"><%= data[i].title %></h2>
+                    <span class="autor-name"><%= data[i].firstName %></span>
+                    <span class="autor-surname"><%= data[i].lastName %></span>
+                    <a href="<%= data[i].email %>"  class="email"><%= data[i].email %></a>
+                    <p class="article"><%= data[i].article %></p>
+                    <a  class="more" href="<%= data[i].more %>">Подробнее...</a>
+                </div>
+            <% }; %>
+        </script>
+    </div>
+</body>
+</html>

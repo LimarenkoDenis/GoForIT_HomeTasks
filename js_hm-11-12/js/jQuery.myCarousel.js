@@ -1,37 +1,36 @@
 (function($) {
 	$.fn.myCarousel = function(option) {
 		var defaults = {
-			current:3,
-			colorBtn: 'blue',
-			// imgWidth: '50px'
+			colorBtn: '#fff',
+			imgWidth: '150px'
 		};
 
-		var settings = $.extend(defaults, option );
-		// var img = $('.carousel-element img');
+		var settings = $.extend(defaults, option);
 
-		// 	img.css({
-		// 		'width' : settings.imgWidth
-		// 	})
+		$('.carousel-element img').css({
+			'width': settings.imgWidth
+		})
 
 		var widthElem = $('.carousel-element').width();
 		var elementsWrap = $('.carousel-list');
-		var count = $('.carousel-element').length - settings.current; 
-		count = count * widthElem;
-		console.log(count);
 
 		elementsWrap.before('<div class="carousel-arrow-left btn"><span>Влево</span></div>');
 		elementsWrap.after('<div class="carousel-arrow-right btn"><span>Вправо</span></div>');
+		elementsWrap.wrap('<div class="carousel-hider"></div>');
+
+		var widthHider = $('.carousel-hider').width();
+		var count = $('.carousel-element').length;
+		count = count * widthElem - widthHider;
+
 
 		var leftBtn = $('.carousel-arrow-left');
 		var rightBtn = $('.carousel-arrow-right');
 		var btn = $('.btn');
 
-		elementsWrap.wrap('<div class="carousel-hider"></div>');
 
 		var currentLeftValue = 0;
-		var minimumOffset = -count ;
+		var minimumOffset = -count;
 		var maximumOffset = 0;
-// debugger
 
 		leftBtn.click(function() {
 			if (currentLeftValue != maximumOffset) {
@@ -43,7 +42,6 @@
 		});
 
 		rightBtn.click(function() {
-			// debugger
 			if (currentLeftValue != minimumOffset) {
 				currentLeftValue -= widthElem;
 				elementsWrap.animate({
@@ -57,4 +55,3 @@
 		})
 	};
 })(jQuery);
-

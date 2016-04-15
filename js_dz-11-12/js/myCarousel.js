@@ -1,37 +1,60 @@
 (function($) {
 	$.fn.myCarousel = function(option) {
-		var leftUIEl = $('.carousel-arrow-left');
-		var rightUIEl = $('.carousel-arrow-right');
-		var elementsList = $('.carousel-list');
-
-		var pixelsOffset = 125;
-		var currentLeftValue = 0;
-		var elementsCount = elementsList.find('.carousel-element').length;
-		var minimumOffset = -((elementsCount - 5) * pixelsOffset);
-		var maximumOffset = 0;
-
 		var defaults = {
-			
-		}
+			current:3,
+			colorBtn: 'blue',
+			// imgWidth: '50px'
+		};
+
 		var settings = $.extend(defaults, option );
+		// var img = $('.carousel-element img');
 
-		leftUIEl.click(function() {
+		// 	img.css({
+		// 		'width' : settings.imgWidth
+		// 	})
+
+		var widthElem = $('.carousel-element').width();
+		var elementsWrap = $('.carousel-list');
+		var count = $('.carousel-element').length - settings.current; 
+		count = count * widthElem;
+		console.log(count);
+
+		elementsWrap.before('<div class="carousel-arrow-left btn"><span>Влево</span></div>');
+		elementsWrap.after('<div class="carousel-arrow-right btn"><span>Вправо</span></div>');
+
+		var leftBtn = $('.carousel-arrow-left');
+		var rightBtn = $('.carousel-arrow-right');
+		var btn = $('.btn');
+
+		elementsWrap.wrap('<div class="carousel-hider"></div>');
+
+		var currentLeftValue = 0;
+		var minimumOffset = -count ;
+		var maximumOffset = 0;
+// debugger
+
+		leftBtn.click(function() {
 			if (currentLeftValue != maximumOffset) {
-				currentLeftValue += 125;
-				elementsList.animate({
+				currentLeftValue += widthElem;
+				elementsWrap.animate({
 					left: currentLeftValue + "px"
-				}, 500);
+				}, 100);
 			}
 		});
 
-		rightUIEl.click(function() {
+		rightBtn.click(function() {
+			// debugger
 			if (currentLeftValue != minimumOffset) {
-				currentLeftValue -= 125;
-				elementsList.animate({
+				currentLeftValue -= widthElem;
+				elementsWrap.animate({
 					left: currentLeftValue + "px"
-				}, 500);
+				}, 100);
 			}
 		});
+
+		btn.css({
+			'background': settings.colorBtn
+		})
 	};
 })(jQuery);
 

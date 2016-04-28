@@ -1,6 +1,6 @@
 $(function() {
    'use strict;'
-   
+
    // localStorage.setItem('data', JSON.stringify(data));
    var page = localStorage.getItem('data');
    var myData = JSON.parse(page);
@@ -43,31 +43,24 @@ $(function() {
 
       // Find default correct answers
       var rightAnswers = [];
-      var getRightAnswers = function() {
-         for (var i = 0; i < myData.categories.length; i++) {
-            for (var j = 0; j < myData.categories[i].variant.length; j++) {
-               var currentAnswer = myData.categories[i].variant[j].rigth;
-               rightAnswers.push(currentAnswer);
-            }
+      for (var i = 0; i < myData.categories.length; i++) {
+         for (var j = 0; j < myData.categories[i].variant.length; j++) {
+            var currentAnswer = myData.categories[i].variant[j].rigth;
+            rightAnswers.push(currentAnswer);
          }
-      };
-      getRightAnswers();
+      }
 
       //collected user answers
       var givenAnswers = [];
-      var getGivenAnswers = function() {
-         $('input[type="checkbox"]').each(function() {
-            if ($(this).prop('checked')) {
-               givenAnswers.push(true);
-            } else {
-               givenAnswers.push(false);
-            }
-         });
-      };
-      getGivenAnswers();
+      $('input[type="checkbox"]').each(function() {
+         if ($(this).prop('checked')) {
+            givenAnswers.push(true);
+         } else {
+            givenAnswers.push(false);
+         }
+      });
 
       var result = JSON.stringify(givenAnswers) === JSON.stringify(rightAnswers);
-
       if (result) {
          $result.text('Congratulations, successfully!')
       } else(

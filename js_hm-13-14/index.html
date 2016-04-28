@@ -13,14 +13,14 @@
 
 
     <script type="text/html" id='test'>
-            <h2 class="title"><%= data.pageTitle %></h2>
-            <form action="">
+            <form class="test" action="">
+                <p class="title"><%= data.pageTitle %></p>
                 <% for (var i = 0; i < data.categories.length; i++ ) { %>
                     <div class="block">
-                        <p><%= data.categories[i].categoryName%></p>
+                        <p><%= data.categories[i].questionName%></p>
                         <ul>
                             <% for (var j = 0; j < data.categories[i].variant.length; j++) { %>
-                                <li><label><input type="checkbox" name="<%= data.categories[i].inputName[j] %>"><span><%= data.categories[i].variant[j]%></span></label></li>
+                                <li><label><input type="checkbox" name="<%= data.categories[i].inputName[j] %>"><span><%= data.categories[i].variant[j].answer %></span></label></li>
                             <% }; %>
                         </ul>
                     </div>
@@ -29,8 +29,9 @@
             </form>
     </script>
 
-<div class="modal">
-   
+<div class="modal js-modal">
+   <div class="js-close close-modal">Close</div>
+   <div class="result js-result"></div>
 </div>
 
 

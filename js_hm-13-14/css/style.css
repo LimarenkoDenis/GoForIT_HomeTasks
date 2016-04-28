@@ -1,4 +1,12 @@
 *{list-style: none;}
+.test{
+	width: 600px;
+	margin: 0 auto;
+}
+.title{
+	font-size: 20px;
+}
+
 .modal{
 	display: none;
 	position: absolute;
@@ -9,10 +17,9 @@
 	margin: -150px 0 0 -300px;
 	text-align: center;
 	background: #000;
-}
-.modal p{
 	color:#fff;
 }
+
 .overlay{
 	position: fixed;
 	top: 0;
@@ -23,4 +30,18 @@
 }
 .show{
 	display: block;
+}
+.close-modal{
+	position: relative;
+	display: inline-block;
+	background: #eee;
+	padding: 20px;
+	z-index: 10000;
+	color:#000;
+	float: right;
+	cursor: pointer;
+}
+.result{
+	padding: 30px;
+	font-size: 30px;
 }

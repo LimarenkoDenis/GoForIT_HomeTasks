@@ -21,7 +21,6 @@ $(function() {
 
 
    //modal window
-   var sucsess;
    var $overlay;
    var $modal = $('.js-modal');
    var $close = $('.js-close');
@@ -63,8 +62,15 @@ $(function() {
       var result = JSON.stringify(givenAnswers) === JSON.stringify(rightAnswers);
       if (result) {
          $result.text('Congratulations, successfully!')
-      } else(
-         $result.text('Unsuccessful'))
+      } else{
+         $result.text('Unsuccessful');
+      }
+
+      //delete checked
+      $('input[type="checkbox"]').each(function() {
+         $(this).removeAttr("checked");
+      });
+
    };
 
    function hideModal() {

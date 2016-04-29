@@ -51,32 +51,32 @@ $(function() {
 		this.weight = weight;
 	}
 
-	Human.prototype = function Worker(workPlace, salary) {
+	function Worker(workPlace, salary) {
 		this.workPlace = workPlace;
 		this.salary = salary;
-	}
+		this.toWork = function () {
+			return 'go work!';
+		}
+	}	
 
-	
-	Worker.prototype.toWork = function (name) {
-		console.log(name + ' go work!');
-	}
 
-	function Student (studyPlace, grants) {
+	function Student (studyPlace, grant) {
 		this.studyPlace = studyPlace;
-		this.grants = grants;
+		this.grant = grant;
 	}
 	Student.prototype.watch = function () {
 		console.log('time to watch TV shows');
 	}
 
-	Worker.prototype = new Human;
-	var newWorker = new Worker('sf', 'dfdf');
+	Worker.prototype = new Human();
+	Student.prototype = new Human();
+	Student.prototype = new Worker();
 
-	console.log(newWorker.name);
+	var denis = new Human('danis', 19, 'male', 175, 65, 43);
+	var worker = new Worker('It' , 1200);
+	var student = new Student('Kpi', 0);
 
-	// var workerDan = new Worker('It spec', '1200$');
-	// workerDan.prototype =  Human;
-	// console.log('name: ' + workerDan.name +  ' I am a ' + workerDan.age + ' years old');
-	// console.log(workerDan.weight);
-
+	console.log(worker.name);
+	console.log(student.salary);
+	console.log(student.toWork());
 });

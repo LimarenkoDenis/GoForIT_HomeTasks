@@ -2,16 +2,22 @@
 <html>
 
 <head>
+	<title>Google Api</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
-	<form>
-	   <input type="text" id="search" class="js-input" placeholder="Enter your query here">
-	   <input type="button" id="button" class="js-btn" value="Search">
+	<form class="search-form">
+		<div class="container">
+		   <input type="text"  class="js-input  search-input" placeholder="Ведите поисковый запрос" autofocus>
+		   <input type="button" class="js-btn btn-search" value="Search">
+	   </div>
 	</form>
-	<ul class="js-result"></ul>
+	<div class="container">
+		<ul class="js-result  result-wrap"></ul>
+	</div>
 </body>
 </html>

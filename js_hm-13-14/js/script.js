@@ -1,7 +1,53 @@
 $(function() {
    'use strict;'
 
-   // localStorage.setItem('data', JSON.stringify(data));
+   var data = {
+      pageTitle: 'Тест по програмированию',
+
+      categories: [{
+         questionName: "Мальчик заплатил за бутылку с пробкой 11 рублей. Бутылка стоит на 10 рублей больше, чем пробка. Сколько стоит пробка? ",
+         variant: [{
+            answer: '1грн',
+            rigth: false
+         }, {
+            answer: '50 копеек',
+            rigth: true
+         }, {
+            answer: '2грн',
+            rigth: false
+         }],
+         inputName: ['11', '12', '13']
+      }, {
+         questionName: "По чему ходят часто, а ездят редко? ",
+         variant: [{
+            answer: 'По лестнице',
+            rigth: true
+         }, {
+            answer: 'По дороге',
+            rigth: true
+         }, {
+            answer: 'По полю',
+            rigth: false
+         }],
+         inputName: ['21', '22', '23']
+      }, {
+         questionName: "Идет то в гору, то с горы, но остается на месте. ",
+
+         variant: [{
+            answer: 'Часы',
+            rigth: true
+         }, {
+            answer: 'Дорога',
+            rigth: true
+         }, {
+            answer: 'Дом',
+            rigth: false
+         }],
+         inputName: ['31', '32', '33']
+      }],
+      result: "Проверить мои результаты"
+   };
+   localStorage.setItem('data', JSON.stringify(data));
    var page = localStorage.getItem('data');
    var myData = JSON.parse(page);
    //end of localStorage end object
@@ -62,7 +108,7 @@ $(function() {
       var result = JSON.stringify(givenAnswers) === JSON.stringify(rightAnswers);
       if (result) {
          $result.text('Congratulations, successfully!')
-      } else{
+      } else {
          $result.text('Unsuccessful');
       }
 

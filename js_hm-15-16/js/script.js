@@ -6,8 +6,8 @@ function GoogleCallback(jqueryObj, data) {
 
 	for (var i = 0; i < resultObj.length; i++) {
 		console.log(resultObj[i]);
-		var item = '<li>' +
-			'<a href="' + resultObj[i].url + '" target="_blank">' + resultObj[i].title + '</a>' +
+		var item = '<li class="item">' +
+			'<a class="title" href="' + resultObj[i].url + '" target="_blank">' + resultObj[i].title + '</a>' +
 			'<p class="contentBox">' + resultObj[i].content + '</p>' +
 			'</li>';
 
@@ -76,7 +76,7 @@ $(function() {
 	var worker = new Worker('It' , 1200);
 	var student = new Student('Kpi', 0);
 
-	console.log(worker.name);
-	console.log(student.salary);
-	console.log(student.toWork());
+	// console.log(worker.name);
+	// console.log(student.salary);
+	// console.log(student.toWork());
 });

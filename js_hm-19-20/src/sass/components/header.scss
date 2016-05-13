@@ -1,3 +1,12 @@
-h1{
-	color:$color;
+.clearfix{
+	@include clearfix()
+}
+.logo{
+	float: left;
+}
+.social-networks{
+	float: right;
+}
+.social__items{
+	display: inline-block;
 }

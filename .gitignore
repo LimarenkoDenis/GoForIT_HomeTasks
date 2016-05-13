@@ -1,15 +1,6 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# Ignore cache
-/.sass-cache
-/.cache
-
-# Ignore .DS_store file
+build/
+node_modules/
+*.log
+*.psd
+.sass-cache/
 .DS_Store
-
-#idea
-.idea
-
-#Node
-node_modules/*
-npm-debug.log

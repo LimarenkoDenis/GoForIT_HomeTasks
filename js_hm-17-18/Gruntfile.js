@@ -1,101 +1,240 @@
+// 'use strict';
+
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt);
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+
+    clean: {
+      build: [
+        'build/css',
+        'build/img',
+        'build/js',
+        'build/font'
+      ]
+    },
+
+    includereplace: {
+      htm: {
+        src: '*.html',
+        dest: 'build/',
+        expand: true,
+        cwd: 'src/'
+      }
+    },
+
+    copy: {
+      img: {
+        expand: true,
+        cwd: 'src/img/',
+        src: ['**/*.{png,jpg,gif,svg}'],
+        dest: 'build/img/'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'src/font/',
+        src: ['*.{eot,svg,woff,ttf}'],
+        dest: 'build/font/'
+      }
+    },
 
     sass: {
-      options: {
-        outputStyle: 'compressed',
-        sourceMap: true
-      },
-      all: {
+      dist: {
+        options: {
+          sourcemap: 'inline',
+          style: 'expanded'
+        },
         files: {
-          'css/application.css': 'scss/application.scss'
+          'build/css/style.css': 'src/sass/style.scss'
         }
       }
     },
 
-    postcss: {
+    autoprefixer: {
       options: {
-        map: true,
-        processors: [
-          require('autoprefixer-core')({
-            browsers: ['> 0.5%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie >6']
-          })
-        ]
+        browsers: ['last 2 versions', 'ie 9'],
+        map: true
       },
-      all: {
-        src: 'css/*.css'
+      style: {
+        src: 'build/css/style.css'
       }
     },
 
-    imagemin: {
-      all: {
-        files: [{
-          expand: true,
-          cwd: 'images/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'images/'
-        }]
+    csscomb: {
+      style: {
+        options: {
+          config: 'csscomb.json'
+        },
+        files: {
+          'build/css/style.css': ['build/css/style.css']
+        }
       }
     },
 
-    sprite: {
-      all: {
-        src: 'images/icons/*.png', // Path to the icons
-        retinaSrcFilter: 'images/icons/*@2x.png', // Path to the icon for the retina, it is important to place them in the same directory as the usual icons, with the addition of @ 2x
-        dest: 'images/sprites.png', // Specify the path where the generated sprite
-        retinaDest: 'images/sprites@2x.png', // Specify the path where the generated retina sprite
-        destCss: 'scss/setup/_sprites.scss', // Specify the path where the generated scss
-        imgPath: '../images/sprites.png',
-        retinaImgPath: '../images/sprites@2x.png', // Specify the path that will be in scss (by default is relative the generated file .scss)
-        padding: 10 // padding in sprite
+    cmq: {
+      options: {
+        log: false
+      },
+      your_target: {
+        files: {
+          'build/css/style.css': ['build/css/style.css']
+        }
+      }
+    },
+
+    cssmin: {
+      style: {
+        options: {
+          keepSpecialComments: 0
+        },
+        files: {
+          'build/css/style.min.css': ['build/css/style.css']
+        }
       }
     },
 
     concat: {
       dist: {
-        src: ['js/**/*.js'],
-        dest: 'js/main.js'
+        src: ['src/js/*.js'],
+        dest: 'build/js/script.js'
       }
     },
 
     uglify: {
       start: {
         files: {
-          'build/js/main.min.js': ['js/main.js']
+          'build/js/script.min.js': ['build/js/script.js']
         }
       }
     },
 
-    watch: {
-      sass: {
-        files: 'scss/**/*.scss',
-        tasks: ['sass', 'postcss']
+    imagemin: {
+      build: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ['build/img/*.{png,jpg,gif,svg}']
+        }]
+      }
+    },
+
+    htmllint: {
+      options: {
+        force: true
       },
-      sprite: {
-        files: 'images/icons/*.png',
-        tasks: ['sprite', 'sass']
+      all: ['build/**/*.html']
+    },
+
+    watch: {
+      style: {
+        files: ['src/sass/**/*.scss'],
+        tasks: ['style'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
       },
       scripts: {
-        files: ['js/**/*.js'],
+        files: ['src/js/**/*.js'],
         tasks: ['js'],
         options: {
           spawn: false,
           livereload: true
         }
       },
+      images: {
+        files: ['src/img/**/*.{png,jpg,gif,svg}'],
+        tasks: ['img'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
+      },
+      html: {
+        files: ['src/**/*.html'],
+        tasks: ['includereplace'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
+      }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: [
+            'build/css/*.css',
+            'build/js/*.js',
+            'build/fonts/**',
+            'build/img/**/*.{png,jpg,gif,svg}',
+            'build/**/*.html'
+          ]
+        },
+        options: {
+          watchTask: true,
+          server: {
+            baseDir: 'build/'
+          },
+          startPath: '/index.html',
+          ghostMode: {
+            clicks: true,
+            forms: true,
+            scroll: false
+          }
+        }
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-spritesmith');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default', [
+    'clean',
+    'includereplace',
+    'copy',
+    'sass',
+    'cmq',
+    'autoprefixer',
+    'csscomb',
+    'cssmin',
+    'concat',
+    'uglify',
+    'imagemin',
+    'browserSync',
+    'watch'
+  ]);
 
-  grunt.registerTask('default', ['sass', 'postcss', 'sprite', 'concat', 'uglify']);
+  grunt.registerTask('build', [
+    'clean',
+    'includereplace',
+    'copy',
+    'sass',
+    'cmq',
+    'autoprefixer',
+    'csscomb',
+    'cssmin',
+    'concat',
+    'uglify',
+    'imagemin',
+    'htmllint'
+  ]);
 
+  grunt.registerTask('style', [
+    'sass',
+    'cmq',
+    'autoprefixer',
+    'csscomb',
+    'cssmin'
+  ]);
+
+  grunt.registerTask('js', [
+    'concat',
+    'uglify'
+  ]);
+
+  grunt.registerTask('img', [
+    'copy:img',
+    'imagemin'
+  ]);
 };

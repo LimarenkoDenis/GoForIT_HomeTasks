@@ -1,3 +1,8 @@
+.main-menu-wrap  {
+	background: $menu;
+}
+
+
 .menu{
 	font-family: $font-ubunta;
 	font-size: 0;
@@ -5,14 +10,45 @@
 }
 .menu__item{
 	display: inline-block;
+	border-right: 1px solid $border;
 }
 .menu__link{
 	display: block;
-	padding: 10px;
+	padding: 20px 39px;
 	font-size: 15px;
+	text-transform: uppercase;
+	color:$white;
+}
+.menu__link:hover{
+	color:#f4b60d;
+	text-decoration: none;
+}
+.active-home{
+	background: $activeHome;
 }
 
 
 .search{
 	float: right;
+	margin-top: 8px;
+	margin-right: 8px;
+	position: relative;
+}
+.search__input{
+	width: 240px;
+	border:1px solid $border;
+	background: $search;
+	color:#626466;
+	padding: 13px;
+	font-size: 12px;
+	height: 40px;
+}
+.search button{
+	position: absolute;
+	color:$share;
+	top:7px;
+	right: 11px;
+	background: none;
+	background:none;
+	border:none;
 }

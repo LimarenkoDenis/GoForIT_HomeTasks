@@ -1,4 +1,26 @@
+.main-column{
+	padding: 60px 75px;
+}
 .column{
-	width: 361px;
+	width: 360px;
+	margin-right: 40px;
 	float: left;
+}
+.column:last-child{
+	margin-right: 0;
+}
+.column-digit{
+	line-height: 1;
+	color:$digit;
+	float: left;
+	width: 117px;
+	font-size: 90px;
+}
+.description{
+	float: right;
+	width: 240px;
+}
+.description__title{
+	font-size: 20px;
+	display: block;
 }

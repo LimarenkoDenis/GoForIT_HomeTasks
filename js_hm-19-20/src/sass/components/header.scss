@@ -1,12 +1,36 @@
 .clearfix{
 	@include clearfix()
 }
+
+
+.header{
+	padding: 36px 0;
+}
+
+
 .logo{
+	display: inline-block;
 	float: left;
 }
+.logo__link{
+	display: block;
+}
+
+
 .social-networks{
 	float: right;
+	margin: 0;
+	font-size: 0;
 }
 .social__items{
 	display: inline-block;
+}
+.social__link{
+	display: block;
+	padding: 10px;
+	font-size: 16px;
+	color: $share;
+}
+.social__link:hover{
+	color:#248cec;
 }

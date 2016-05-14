@@ -1,8 +1,17 @@
-.services{
-	float: left;
-	width: 261px;
+.services-wrap{
+	background: $menu;
+	padding: 40px 70px;
 }
 
-.services__img{
-	width: 100%;
+.services{
+	float: left;
+	width: 260px;
+	margin-right: 40px;
+
+	&:last-child{
+		margin-right: 0;
+	}
+	&__img{
+		width: 100%;
+	}
 }

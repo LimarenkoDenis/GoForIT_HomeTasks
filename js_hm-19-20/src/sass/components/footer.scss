@@ -1,9 +1,33 @@
+.footer-blog{
+	background: $menu;
+	padding: 60px 80px;
+}
+
 .info{
 	width: 260px;
 	float: left;
+	margin-right: 40px;
+}
+.info-list{
+	padding: 0;
+	margin: 0;
+
+	&__item{
+		border-bottom: 1px solid #393c40;
+	}
+	&__link:hover{
+		color:#248cec;
+	}
+}
+.info:last-child{
+	margin-right: 0;
 }
 
 
+
+.footer-contacts-wrap{
+	background: $footer;
+}
 .footer-contacts{
 	float: left;
 }

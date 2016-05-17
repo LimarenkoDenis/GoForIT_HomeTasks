@@ -1,6 +1,8 @@
 .main-menu-wrap  {
 	background: $menu;
+	margin-bottom: 20px;
 }
+
 
 .menu{
 	font-family: $font-ubunta;
@@ -8,7 +10,7 @@
 	float: left;
 	padding: 0;
 	margin: 0;
-	
+
 	&__item{
 		display: inline-block;
 		border-right: 1px solid $border;
@@ -37,6 +39,7 @@
 	margin-top: 8px;
 	margin-right: 8px;
 	position: relative;
+
 
 	&__input{
 		width: 240px;

@@ -19,8 +19,24 @@
 .description{
 	float: right;
 	width: 240px;
-}
-.description__title{
-	font-size: 20px;
-	display: block;
+
+	&__title{
+		font-size: 20px;
+		display: block;
+		font-family: $font-ubunta;
+		font-weight: $font500;
+	}
+	&__text{
+		font-family: $font-base;
+		font-size: 13px;
+		color:#8a8a8a;
+	}
+	&__link{
+		font-size: 13px;
+		color:$black;
+
+		&:hover{
+			color:#248cec
+		}
+	}
 }

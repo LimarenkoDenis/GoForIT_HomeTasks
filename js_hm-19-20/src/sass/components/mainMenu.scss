@@ -2,6 +2,7 @@
 	background: $menu;
 }
 
+
 .menu{
 	font-family: $font-ubunta;
 	font-size: 0;
@@ -38,6 +39,7 @@
 	margin-right: 8px;
 	position: relative;
 
+
 	&__input{
 		width: 240px;
 		border:1px solid $border;
@@ -58,3 +60,4 @@
 		border:none;
 	}
 }
+

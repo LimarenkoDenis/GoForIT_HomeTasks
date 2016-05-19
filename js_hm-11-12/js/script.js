@@ -1,6 +1,6 @@
 $(function() {
     $('.carousel-list').myCarousel();
-    
+
     var html = $('#test').html();
     var articles = [
       {
@@ -10,7 +10,7 @@ $(function() {
           email: 'limarden.com',
           more: 'https://www.google.com',
           article: 'Nisi voluptatum, esse vitae laboriosam libero expedita ea vel eius, ullam quis assumenda, quia repudiandae, neque natus omnis in consequatur at! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, tempore!'
-      }, 
+      },
       {
           title: 'Sports',
           firstName: 'Dana',
@@ -18,7 +18,7 @@ $(function() {
           email: 'dancart@gmail.com',
           more: 'https://www.yandex.com',
           article: 'Eveniet quam ut natus harum molestias reiciendis veritatis vel ipsa earum ex laudantium, quas atque commodi asperiores distinctio quae incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis esse, officia commodi quis maxime laborum est. Possimus, illum voluptate nostrum.'
-      }, 
+      },
       {
           title: 'The weather',
           firstName: 'Danil',

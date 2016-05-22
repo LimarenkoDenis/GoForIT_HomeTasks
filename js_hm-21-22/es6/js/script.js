@@ -1,7 +1,7 @@
 {
     'use strict';
         var data = {
-            pageTitle: 'Тест по програмированию',
+            pageTitle: 'Тест',
 
             categories: [{
                 questionName: "Мальчик заплатил за бутылку с пробкой 11 рублей. Бутылка стоит на 10 рублей больше, чем пробка. Сколько стоит пробка? ",
@@ -65,50 +65,64 @@
         var close = modal.querySelector('.js-close');
         var resultOutput = modal.querySelector('.js-result');
         var verifyBtn = document.querySelector('.js-verify');
+        var block = document.querySelectorAll('.block');
+        var allInput = [];
+        var rightAnswers = [];
+        var givenAnswers = [];
+        var resultVerify;
 
         verifyBtn.addEventListener('click', showModal)
 
-        function hideModal() {
-            overlay.remove();
-            modal.classList.remove('show');
-        }
-
-        function verifyFunc(){
-            var allInput = [];
-            var block = document.querySelectorAll('.block');
-            var rightAnswers = [];
-            var givenAnswers = [];
-
+        function findAllInput(){
             for (let k = 0; k < block.length; k++) {
                 for (let i = 0; i < block[k].querySelectorAll('input[type="checkbox"]').length; i++) {
                     allInput.push(block[k].querySelectorAll('input[type="checkbox"]')[i]);
-                }
-            }
+                };
+            };
+        };
 
+        function userAnswer(){
             for (let i = 0; i < myData.categories.length; i++) {
                 for (let j = 0; j < myData.categories[i].variant.length; j++) {
                     var currentAnswer = myData.categories[i].variant[j].rigth;
                     rightAnswers.push(currentAnswer);
-                }
-            }
+                };
+            };
+        };
 
+        function AnswerPush(){
             for (let i = 0; i < allInput.length; i++) {
                 if (allInput[i].checked) {
                     givenAnswers.push(true);
                 } else {
                     givenAnswers.push(false);
-                }
+                };
                 allInput[i].checked = false
             };
+        };
 
-            var resultVerify = JSON.stringify(givenAnswers) === JSON.stringify(rightAnswers);
+        function verifyFunc(){
+            resultVerify = JSON.stringify(givenAnswers) === JSON.stringify(rightAnswers);
+        };
 
+        function Display(){
             if (resultVerify) {
                 resultOutput.innerHTML = 'Congratulations, successfully!'
             } else {
                 resultOutput.innerHTML = 'Unsuccessful';
-            }
-        }
+            };
+        };
+
+        function hideModal() {
+            overlay.remove();
+            modal.classList.remove('show');
+        };
+
+        function cleanArrs(){
+            allInput = [];
+            rightAnswers = [];
+            givenAnswers = [];
+        };
 
         function showModal(event) {
             event.preventDefault();
@@ -117,10 +131,13 @@
             overlay.className = "overlay";
             document.body.appendChild(overlay);
             modal.classList.add("show");
+            
+            cleanArrs();
 
-
+            findAllInput();
+            userAnswer();
+            AnswerPush();
             verifyFunc();
-
-
+            Display();
         };
 }

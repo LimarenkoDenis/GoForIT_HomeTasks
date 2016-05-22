@@ -1,34 +1,35 @@
 var app = {
-    userInput : +prompt('Введите число', ''),
-    userPow : +prompt('Введите степень', ''),
-
     pow: function(userInput, userPow) {
         var result = 1;
 
-        for (var i = 0; i < userPow; i++) {
-            result *= userInput;
+        if (userPow < 0) {
+
+            for (var i = 0; i > userPow; i--) {
+                result *= userInput;
+            };
+
+            result = 1 / result;
+            return result;
+
+        } else {
+
+            for (var i = 0; i < userPow; i++) {
+                result *= userInput;
+            };
+
+            return result;
         };
-
-        return result;
-    },
-
-    minusPow:function (userInput, userPow) {
-        var result = 1;
-
-        for (var i = 0; i > userPow; i--) {
-            result *= userInput;
-        }
-
-        result = 1 / result;
-        return result;
     }
-
 };
 
-if (app.userPow < 0) {
-    console.log(app.minusPow(app.userInput, app.userPow));
-} else {
-    console.log(app.pow(app.userInput, app.userPow));
-};
+console.log(app.pow(2,2));
+console.log(app.pow(2,3));
+console.log(app.pow(2,-2));
+console.log(app.pow(-2,2));
+console.log(app.pow(3,3));
+console.log(app.pow(-2,3));
 
-module.exports = app;
+
+try{
+    module.exports = app;
+}catch(e){}

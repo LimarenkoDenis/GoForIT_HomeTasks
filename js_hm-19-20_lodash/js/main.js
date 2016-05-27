@@ -273,9 +273,43 @@ var json = [
     "_id": "56bdc3396fdbaec5ee4ca929"
   }
 ]
-var data = JSON.stringify(json);
-var myData = JSON.parse(data);
+var myData = JSON.stringify(json);
+var data = JSON.parse(myData);
 
-var skills = _.map(myData, function (obj) {
+
+var sorted = _.sortBy(data,function (obj) {
+    return obj.friends.length
+});
+
+var names = _.map(sorted, function (obj) {
+    return obj.name;
+});
+
+var skills = _.map(sorted, function (obj) {
     return obj.skills;
 });
+
+var friends = _.map(sorted, function (obj) {
+    return obj.friends;
+});
+var nameArr = [];
+friends.forEach(function(arr){
+    arr.forEach(function(obj){
+        nameArr.push(obj.name);
+    })
+});
+
+friends = _.uniq(nameArr);
+skills = union(skills);
+
+console.log('Skills: ',skills);
+console.log('Names: ',names);
+console.log('Friends: ',friends);
+
+function union(arr) {
+    var tmpArr = [];
+    arr.forEach(function (obj) {
+        tmpArr = _.union(tmpArr,obj);
+    });
+    return tmpArr.sort();
+}

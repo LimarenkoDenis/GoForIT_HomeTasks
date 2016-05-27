@@ -1,14 +1,21 @@
 .block-news-wrap{
 	background: $news;
-	padding: 50px 80px;
+	padding: 50px 0 80px;
 }
 .news-wrap{
 	width: 561px;
 	float: left;
+
+	&__title{
+		font-size: $fontSize-large;
+		font-family: $font-ubunta;
+		font-weight: $font500;
+		margin-bottom: 40px;
+	}
 }
 .news{
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 
 	&__date{
 		position: absolute;
@@ -29,16 +36,31 @@
 		display: block;
 		font-size: 16px;
 		font-family: $font-ubunta;
+		font-weight: $font500;
 		color:#2a2d32;
 
 		&:hover{
 			color:#248cec;
 		}
 	}
+	&__author{
+		font-size: $fontSize-smallest;
+		color:$news_descr;
+
+		.news__comments{
+			color:#9e9e9e;
+		}
+		a{
+			color:#248cec;
+		}
+	}
 	&__description{
-		font-size: 13px;
+		font-size: $fontSize-smallest;
+		color:$news_descr;
+     	line-height: 20px;
 	}
 }
+	
 .news-img-wrap{
 	float: left;
 	width: 151px;
@@ -55,15 +77,19 @@
 .contentBox{
   float: right;
   width: 50%;
-  h3{
-    color: red;
-    padding-bottom: 15px;
+
+  &__title{
+  		font-size: $fontSize-large;
+		font-family: $font-ubunta;
+		font-weight: $font500;
+		margin-bottom: 10px;
   }
 }
+
 .accordion{
   padding: 24px 5px 0 16px;
 
-	&__title{
+  &__title{
     background-color: #fff;
     padding: 10px 0 10px 0;
     margin-top: 5px;
@@ -76,8 +102,12 @@
     }
   }
   &__description{
-     padding: 20px 10px 10px 40px;
+     padding: 15px 10px 10px 40px;
      display: none;
+     font-size: $fontSize-smallest;
+     color:$news_descr;
+     line-height: 20px;
+
   }
   .active{
        color: #fff;

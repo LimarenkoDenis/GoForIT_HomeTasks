@@ -1,11 +1,13 @@
 .services-wrap{
 	background: $menu;
-	padding: 40px 70px;
+	padding: 40px 0 65px;
 
 	&__title{
 		color:$white;
-		padding: 20px 0;
+		margin-bottom: 50px;
 		font-size: $fontSize-large;
+		font-family: Ubunta;
+		font-weight: 500;
 	}
 }
 
@@ -14,15 +16,47 @@
 	float: left;
 	width: 260px;
 	margin-right: 40px;
+	text-align: center;
+	position: relative;
+
 
 	&:last-child{
 		margin-right: 0;
 	}
 	&__img{
 		width: 100%;
+		margin-bottom: 30px;
 	}
 	&__link{
 		color:$white;
 		font-size: $fontSize-small;
+		font-family: Ubunta;
+		font-weight: 600;
 	}
+	&:hover .services__link{
+		color:#f4b60d;
+	}
+}
+.services a .plus-bg{
+	position: absolute;
+	width: 100%;
+	height: 260px;
+	display: none;
+	background: rgba(44, 143, 233, .6);
+}
+.plus-bg i {
+	display: block;
+	width: 35px;
+	height: 35px;
+	color:$white;
+ 	position: absolute;  
+ 	font-size: 40px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.services a:hover .plus-bg{
+	display: block;
 }

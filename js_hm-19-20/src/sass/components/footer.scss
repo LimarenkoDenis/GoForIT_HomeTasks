@@ -7,6 +7,14 @@
 	width: 260px;
 	float: left;
 	margin-right: 40px;
+
+	&__title{
+		color: $white;
+		font-size: 16px;
+		text-transform: uppercase;
+		padding: 0;
+		margin-bottom: 30px;
+	}
 }
 .info:last-child{
 	margin-right: 0;
@@ -18,9 +26,16 @@
 
 	&__item{
 		border-bottom: 1px solid #393c40;
+		padding: 10px 0;
+
+	}
+	&__link{
+		color:#6c6d70;
+		font-size: 13px;
 	}
 	&__link:hover{
 		color:#248cec;
+
 	}
 }
 .info:last-child{
@@ -45,9 +60,15 @@
 		&__tel{
 			margin-right: 15px;
 		}
+		a{
+			color:$footer-link;
+			font-size: $fontSize-smallest;
+		}
 }
 
 .copyright{
 	float: right;
 	margin: 0;
+	color:$footer-link;
+	font-size: $fontSize-smallest;
 }

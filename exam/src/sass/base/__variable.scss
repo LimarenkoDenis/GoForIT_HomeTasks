@@ -19,3 +19,15 @@ $lineHeight-base: 1.5;
 $lineHeight-loose: 1.6;
 $lineHeight-looser: 1.7;
 
+
+$fontBold: 'Montserrat', sans-serif;
+$colorW: #fff;
+$colorPink: #ff4e50;
+$fontColor: #333333;
+
+@mixin btn {
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
